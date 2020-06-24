@@ -1,1 +1,158 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+
+:root {
+  --bg-color: #f7f8fc;
+  --primary: #141c2c;
+  --white: #fff;
+  --google-blue: #2762ab;
+  --second-blue: #2762eb;
+  --border-color: #dce7ff;
+  --ghost: #ecf2ff;
+  --cbox-color: #7a7e8c;
+  --radius-sm: 3px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: var(--google-blue);
+  text-decoration: none;
+}
+
+.body {
+  color: var(--primary);
+  background-color: var(--bg-color);
+  font-family: 'Open Sans' sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  background-color: var(--white);
+  border-radius: var(--radius-sm);
+  border: 20px solid var(--border-color);
+  width: 1000px;
+  max-width: 100%;
+  display: flex;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1);
+}
+
+.btn img {
+  margin-right: 5px;
+  width: 20px;
+}
+
+.btn {
+  cursor: pointer;
+  color: var(--white);
+  background-color: var(--primary);
+  border: 2px solid var(--primary);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: inherit !important;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 10px;
+  margin: 20px 0;
+  width: 100%;
+}
+
+.btn-ghost {
+  color: var(--primary);
+  background-color: transparent;
+  border-color: var(--ghost);
+}
+
+.form {
+  border-right: 1px solid var(--ghost);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  flex: 1;
+}
+
+.form-control {
+  margin: 10px 0;
+  width: 100%;
+}
+
+.form-label {
+  display: inline-block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-input {
+  background-color: transparent;
+  border: 2px solid var(--ghost);
+  border-radius: var(--radius-sm);
+  font-family: inherit !important;
+  font-size: 14px;
+  padding: 10px;
+  width: 100%;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.checkbox-container a {
+  margin-left: auto;
+}
+
+.checkbox-container-label {
+  color: var(--cbox-color);
+  font-weight: normal;
+}
+
+.features {
+  flex: 1.5;
+  padding: 30px 40px;
+}
+
+.feature {
+  padding-left: 30px;
+  position: relative;
+  margin: 40px 0;
+}
+
+.feature i {
+  color: var(--second-blue);
+  position: absolute;
+  top: 5px;
+  left: 0;
+}
+
+.feature h3 {
+  margin: 0;
+}
+
+.feature p {
+  font-size: 14px;
+  line-height: 2.3;
+  margin: 5px 0;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column-reverse;
+  }
+
+  .form {
+    border-right: 0;
+  }
+}
